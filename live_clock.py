@@ -127,7 +127,7 @@ def angles(t):
 # ============= RUN WITH DASH ================
 head = 'Powered by: 𝓐𝓼𝓽𝓻𝓸𝓓𝓪𝓽𝓪𝓢𝓬𝓲𝓮𝓷𝓬𝓮.𝓷𝓮𝓽'
 
-app = dash.Dash(__name__)
+app = dash.Dash(__name__, title='Live Astronomical Clock')
 
 server = app.server
 
@@ -231,5 +231,5 @@ def update_plot(n, lon):
     return fig
 
 
-app.run_server(debug=True)
-
+if __name__ == '__main__':
+    app.run_server(debug=True)
