@@ -127,7 +127,9 @@ def angles(t):
 # ============= RUN WITH DASH ================
 head = 'Powered by: 𝓐𝓼𝓽𝓻𝓸𝓓𝓪𝓽𝓪𝓢𝓬𝓲𝓮𝓷𝓬𝓮.𝓷𝓮𝓽'
 
-app = dash.Dash()
+app = dash.Dash(__name__)
+
+server = app.server
 
 app.layout = html.Div([
     html.Label('Longtitude: ', style={"margin-left": '4px'}),
